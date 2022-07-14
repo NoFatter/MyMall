@@ -21,6 +21,7 @@
         <module>mall-order</module>
         <module>mall-product</module>
         <module>mall-ware</module>
+        <module>mall-base</module>
     </modules>
     <dependencyManagement>
         <dependencies>
