@@ -30,7 +30,7 @@
         <java.version>1.8</java.version>
         <junit.version>4.13.2</junit.version>
         <jedis.version>4.2.2</jedis.version>
-        <druid.version>1.1.10</druid.version>
+        <druid.version>1.2.11</druid.version>
         <mybatisplus.version>3.5.2</mybatisplus.version>
         <sqlserver.version>4.0</sqlserver.version>
         <oracle.version>11.2.0.3</oracle.version>
