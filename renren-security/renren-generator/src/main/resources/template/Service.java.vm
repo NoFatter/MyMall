@@ -1,8 +1,8 @@
-package ${package}.modules.${moduleName}.service;
+package ${package}.service;
 
 import ${package}.common.service.CrudService;
-import ${package}.modules.${moduleName}.dto.${className}DTO;
-import ${package}.modules.${moduleName}.entity.${className}Entity;
+import ${package}.dto.${className}DTO;
+import ${package}.entity.${className}Entity;
 
 /**
  * ${comments}

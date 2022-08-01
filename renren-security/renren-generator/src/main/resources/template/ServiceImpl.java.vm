@@ -1,11 +1,11 @@
-package ${package}.modules.${moduleName}.service.impl;
+package ${package}.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import ${package}.common.service.impl.CrudServiceImpl;
-import ${package}.modules.${moduleName}.dao.${className}Dao;
-import ${package}.modules.${moduleName}.dto.${className}DTO;
-import ${package}.modules.${moduleName}.entity.${className}Entity;
-import ${package}.modules.${moduleName}.service.${className}Service;
+import ${package}.dao.${className}Dao;
+import ${package}.dto.${className}DTO;
+import ${package}.entity.${className}Entity;
+import ${package}.service.${className}Service;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 

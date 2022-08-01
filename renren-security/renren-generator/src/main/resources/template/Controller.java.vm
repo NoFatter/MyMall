@@ -1,4 +1,4 @@
-package ${package}.modules.${moduleName}.controller;
+package ${package}.controller;
 
 import ${package}.common.annotation.LogOperation;
 import ${package}.common.constant.Constant;
@@ -10,9 +10,9 @@ import ${package}.common.validator.ValidatorUtils;
 import ${package}.common.validator.group.AddGroup;
 import ${package}.common.validator.group.DefaultGroup;
 import ${package}.common.validator.group.UpdateGroup;
-import ${package}.modules.${moduleName}.dto.${className}DTO;
-import ${package}.modules.${moduleName}.excel.${className}Excel;
-import ${package}.modules.${moduleName}.service.${className}Service;
+import ${package}.dto.${className}DTO;
+import ${package}.excel.${className}Excel;
+import ${package}.service.${className}Service;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -34,7 +34,7 @@ import java.util.Map;
  * @since ${version} ${date}
  */
 @RestController
-@RequestMapping("${moduleName}/${pathName}")
+@RequestMapping("/${pathName}")
 @Api(tags="${comments}")
 public class ${className}Controller {
     @Autowired
@@ -48,7 +48,7 @@ public class ${className}Controller {
         @ApiImplicitParam(name = Constant.ORDER_FIELD, value = "排序字段", paramType = "query", dataType="String") ,
         @ApiImplicitParam(name = Constant.ORDER, value = "排序方式，可选值(asc、desc)", paramType = "query", dataType="String")
     })
-    @RequiresPermissions("${moduleName}:${pathName}:page")
+    @RequiresPermissions("${pathName}:page")
     public Result<PageData<${className}DTO>> page(@ApiIgnore @RequestParam Map<String, Object> params){
         PageData<${className}DTO> page = ${classname}Service.page(params);
 
@@ -57,7 +57,7 @@ public class ${className}Controller {
 
     @GetMapping("{id}")
     @ApiOperation("信息")
-    @RequiresPermissions("${moduleName}:${pathName}:info")
+    @RequiresPermissions("${pathName}:info")
     public Result<${className}DTO> get(@PathVariable("id") Long id){
         ${className}DTO data = ${classname}Service.get(id);
 
@@ -67,7 +67,7 @@ public class ${className}Controller {
     @PostMapping
     @ApiOperation("保存")
     @LogOperation("保存")
-    @RequiresPermissions("${moduleName}:${pathName}:save")
+    @RequiresPermissions("${pathName}:save")
     public Result save(@RequestBody ${className}DTO dto){
         //效验数据
         ValidatorUtils.validateEntity(dto, AddGroup.class, DefaultGroup.class);
@@ -80,7 +80,7 @@ public class ${className}Controller {
     @PutMapping
     @ApiOperation("修改")
     @LogOperation("修改")
-    @RequiresPermissions("${moduleName}:${pathName}:update")
+    @RequiresPermissions("${pathName}:update")
     public Result update(@RequestBody ${className}DTO dto){
         //效验数据
         ValidatorUtils.validateEntity(dto, UpdateGroup.class, DefaultGroup.class);
@@ -93,7 +93,7 @@ public class ${className}Controller {
     @DeleteMapping
     @ApiOperation("删除")
     @LogOperation("删除")
-    @RequiresPermissions("${moduleName}:${pathName}:delete")
+    @RequiresPermissions("${pathName}:delete")
     public Result delete(@RequestBody Long[] ids){
         //效验数据
         AssertUtils.isArrayEmpty(ids, "id");
@@ -106,7 +106,7 @@ public class ${className}Controller {
     @GetMapping("export")
     @ApiOperation("导出")
     @LogOperation("导出")
-    @RequiresPermissions("${moduleName}:${pathName}:export")
+    @RequiresPermissions("${pathName}:export")
     public void export(@ApiIgnore @RequestParam Map<String, Object> params, HttpServletResponse response) throws Exception {
         List<${className}DTO> list = ${classname}Service.list(params);
 

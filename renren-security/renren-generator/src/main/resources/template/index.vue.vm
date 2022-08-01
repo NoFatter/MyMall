@@ -12,10 +12,10 @@
           <el-button type="info" @click="exportHandle()">{{ $t('export') }}</el-button>
         </el-form-item>
         <el-form-item>
-          <el-button v-if="$hasPermission('${moduleName}:${pathName}:save')" type="primary" @click="addOrUpdateHandle()">{{ $t('add') }}</el-button>
+          <el-button v-if="$hasPermission('${pathName}:save')" type="primary" @click="addOrUpdateHandle()">{{ $t('add') }}</el-button>
         </el-form-item>
         <el-form-item>
-          <el-button v-if="$hasPermission('${moduleName}:${pathName}:delete')" type="danger" @click="deleteHandle()">{{ $t('deleteBatch') }}</el-button>
+          <el-button v-if="$hasPermission('${pathName}:delete')" type="danger" @click="deleteHandle()">{{ $t('deleteBatch') }}</el-button>
         </el-form-item>
       </el-form>
       <el-table v-loading="dataListLoading" :data="dataList" border @selection-change="dataListSelectionChangeHandle" style="width: 100%;">
@@ -25,8 +25,8 @@
 #end
         <el-table-column :label="$t('handle')" fixed="right" header-align="center" align="center" width="150">
           <template slot-scope="scope">
-            <el-button v-if="$hasPermission('${moduleName}:${pathName}:update')" type="text" size="small" @click="addOrUpdateHandle(scope.row.id)">{{ $t('update') }}</el-button>
-            <el-button v-if="$hasPermission('${moduleName}:${pathName}:delete')" type="text" size="small" @click="deleteHandle(scope.row.id)">{{ $t('delete') }}</el-button>
+            <el-button v-if="$hasPermission('${pathName}:update')" type="text" size="small" @click="addOrUpdateHandle(scope.row.id)">{{ $t('update') }}</el-button>
+            <el-button v-if="$hasPermission('${pathName}:delete')" type="text" size="small" @click="deleteHandle(scope.row.id)">{{ $t('delete') }}</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -53,10 +53,10 @@ export default {
   data () {
     return {
       mixinViewModuleOptions: {
-        getDataListURL: '/${moduleName}/${pathName}/page',
+        getDataListURL: '//${pathName}/page',
         getDataListIsPage: true,
-        exportURL: '/${moduleName}/${pathName}/export',
-        deleteURL: '/${moduleName}/${pathName}',
+        exportURL: '//${pathName}/export',
+        deleteURL: '//${pathName}',
         deleteIsBatch: true
       },
       dataForm: {

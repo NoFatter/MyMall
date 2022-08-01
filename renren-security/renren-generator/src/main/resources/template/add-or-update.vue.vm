@@ -56,7 +56,7 @@ export default {
     },
     // 获取信息
     getInfo () {
-      #[[this.$http.get(]]#`/${moduleName}/${pathName}/#[[${]]#this.dataForm.${pk.attrname}}`).then(({ data: res }) => {
+      #[[this.$http.get(]]#`//${pathName}/#[[${]]#this.dataForm.${pk.attrname}}`).then(({ data: res }) => {
         if (res.code !== 0) {
           #[[return this.$message.error(res.msg)]]#
         }
@@ -72,7 +72,7 @@ export default {
         if (!valid) {
           return false
         }
-        #[[this.$http]]#[!this.dataForm.${pk.attrname} ? 'post' : 'put']('/${moduleName}/${pathName}/', this.dataForm).then(({ data: res }) => {
+        #[[this.$http]]#[!this.dataForm.${pk.attrname} ? 'post' : 'put']('//${pathName}/', this.dataForm).then(({ data: res }) => {
           if (res.code !== 0) {
             #[[return this.$message.error(res.msg)]]#
           }

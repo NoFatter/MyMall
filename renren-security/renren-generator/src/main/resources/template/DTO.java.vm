@@ -1,4 +1,4 @@
-package ${package}.modules.${moduleName}.dto;
+package ${package}.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
