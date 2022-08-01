@@ -1,6 +1,6 @@
 package ${package}.service;
 
-import ${package}.common.service.CrudService;
+import io.renren.common.service.CrudService;
 import ${package}.dto.${className}DTO;
 import ${package}.entity.${className}Entity;
 

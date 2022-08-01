@@ -1,15 +1,15 @@
 package ${package}.controller;
 
-import ${package}.common.annotation.LogOperation;
-import ${package}.common.constant.Constant;
-import ${package}.common.page.PageData;
-import ${package}.common.utils.ExcelUtils;
-import ${package}.common.utils.Result;
-import ${package}.common.validator.AssertUtils;
-import ${package}.common.validator.ValidatorUtils;
-import ${package}.common.validator.group.AddGroup;
-import ${package}.common.validator.group.DefaultGroup;
-import ${package}.common.validator.group.UpdateGroup;
+import io.renren.common.annotation.LogOperation;
+import io.renren.common.constant.Constant;
+import io.renren.common.page.PageData;
+import io.renren.common.utils.ExcelUtils;
+import io.renren.common.utils.Result;
+import io.renren.common.validator.AssertUtils;
+import io.renren.common.validator.ValidatorUtils;
+import io.renren.common.validator.group.AddGroup;
+import io.renren.common.validator.group.DefaultGroup;
+import io.renren.common.validator.group.UpdateGroup;
 import ${package}.dto.${className}DTO;
 import ${package}.excel.${className}Excel;
 import ${package}.service.${className}Service;
