@@ -7,6 +7,7 @@ import com.mall.product.dto.BrandDTO;
 import com.mall.product.entity.BrandEntity;
 import com.mall.product.service.BrandService;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -19,7 +20,6 @@ import java.util.Map;
  */
 @Service
 public class BrandServiceImpl extends CrudServiceImpl<BrandDao, BrandEntity, BrandDTO> implements BrandService {
-
     @Override
     public QueryWrapper<BrandEntity> getWrapper(Map<String, Object> params){
         String id = (String)params.get("id");

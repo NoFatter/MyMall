@@ -3,6 +3,7 @@
 		<groupId>io.renren</groupId>
 		<artifactId>renren-security</artifactId>
 		<version>5.0.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>renren-api</artifactId>
