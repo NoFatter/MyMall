@@ -1,5 +1,6 @@
 package com.mall.product.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -18,6 +19,7 @@ public class CategoryBrandRelationEntity {
     /**
      * 
      */
+    @TableId
 	private Long id;
     /**
      * 品牌id

@@ -1,6 +1,6 @@
 package com.mall.product;
 
-import com.mall.product.dto.BrandDTO;
+import com.mall.product.entity.BrandEntity;
 import com.mall.product.service.BrandService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,9 +16,22 @@ public class ProductApplicationTest {
     BrandService brandService;
     @Test
     public void contextLoads(){
-        BrandDTO brandEntity = new BrandDTO();
-        brandEntity.setName("华为");
-        brandService.save(brandEntity);
+        BrandEntity brandEntity = new BrandEntity();
+        /**
+            
+         */
+        /**
+         * 修改
+         */
+        brandEntity.setBrandId(3L);
+        brandEntity.setDescript("爱国");
+        brandService.updateById(brandEntity);
+        /**
+         *  插入
+         */
+//        brandEntity.setName("华为");
+//        brandService.insert(brandEntity);
+
         System.out.println("Success!!");
     }
 }
