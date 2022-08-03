@@ -5,10 +5,24 @@ spring:
       url: jdbc:mysql://159.75.4.201:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
       username: root
       password: root
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   global-config:
     db-config:
       id-type: auto
+
 server:
   port: 8010
+
+knife4j:
+  enable: true
+  basic:
+    enable: false
+    username: admin
+    password: admin
+  setting:
+    enableFooter: false
