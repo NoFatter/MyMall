@@ -1,4 +1,14 @@
 spring:
+  application:
+    name: mall-ware
+  cloud:
+    ## nacos 配置
+    nacos:
+      discovery:
+        server-addr: 159.75.4.201:8848
+        username: nacos
+        password: nacos
+        namespace: public
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
