@@ -23,6 +23,7 @@
         <module>mall-ware</module>
         <module>mall-base</module>
         <module>renren-security</module>
+        <module>mall-gateway</module>
     </modules>
     <dependencyManagement>
         <dependencies>
