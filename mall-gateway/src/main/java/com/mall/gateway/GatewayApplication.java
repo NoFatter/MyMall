@@ -9,8 +9,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Author: NoFat
  * Create time:2022/6/22 19:42
  **/
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication
 public class GatewayApplication {
     public static void main(String[] args){
         SpringApplication.run(GatewayApplication.class);
