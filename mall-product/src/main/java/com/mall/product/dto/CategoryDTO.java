@@ -1,11 +1,13 @@
 package com.mall.product.dto;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -46,5 +48,7 @@ public class CategoryDTO implements Serializable {
 	@ApiModelProperty(value = "商品数量")
 	private Integer productCount;
 
-
+	@ApiModelProperty(value = "子分类")
+	@TableField(exist = false)
+	private List<CategoryDTO> children;
 }

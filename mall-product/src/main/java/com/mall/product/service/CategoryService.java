@@ -4,6 +4,8 @@ import io.renren.common.service.CrudService;
 import com.mall.product.dto.CategoryDTO;
 import com.mall.product.entity.CategoryEntity;
 
+import java.util.List;
+
 /**
  * 商品三级分类
  *
@@ -12,4 +14,5 @@ import com.mall.product.entity.CategoryEntity;
  */
 public interface CategoryService extends CrudService<CategoryEntity, CategoryDTO> {
 
+    List<CategoryDTO> listWithTree();
 }

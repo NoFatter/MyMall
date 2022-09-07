@@ -1,5 +1,6 @@
 package com.mall.product.controller;
 
+import com.mall.product.entity.CategoryEntity;
 import io.renren.common.annotation.LogOperation;
 import io.renren.common.constant.Constant;
 import io.renren.common.page.PageData;
@@ -40,6 +41,14 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    //以树形结构查询所有分类及其子分类
+    @GetMapping("list")
+    @ApiOperation("树形查出分类")
+    public Result<List<CategoryDTO>> list(){
+        List<CategoryDTO> categoryDTOS = categoryService.listWithTree();
+
+        return new Result<List<CategoryDTO>>().ok(categoryDTOS);
+    }
     @GetMapping("page")
     @ApiOperation("分页")
     @ApiImplicitParams({
