@@ -80,7 +80,6 @@ public class CategoryController {
     public Result save(@RequestBody CategoryDTO dto){
         //效验数据
         ValidatorUtils.validateEntity(dto, AddGroup.class, DefaultGroup.class);
-
         categoryService.save(dto);
 
         return new Result();
@@ -93,7 +92,6 @@ public class CategoryController {
     public Result update(@RequestBody CategoryDTO dto){
         //效验数据
         ValidatorUtils.validateEntity(dto, UpdateGroup.class, DefaultGroup.class);
-
         categoryService.update(dto);
 
         return new Result();
